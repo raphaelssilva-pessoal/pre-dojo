@@ -1,4 +1,4 @@
-package br.com.amil.dojo.model.evento;
+package br.com.amil.dojo.model;
 
 public enum TypeEvento {
 	INICIOPARTIDA,
