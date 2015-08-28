@@ -19,8 +19,9 @@ public class InicioPartida extends Evento {
     public void change(Log log) {
         Pattern r = Pattern.compile(Constants.REGEX_EVENTO_INICIO_PARTIDA);
         Matcher m = r.matcher(log.getMensagem());
+        m.find();
         this.setDataEvento(log.getDataLog());
-        this.setNumeroPartida(m.group(0));
+        this.setNumeroPartida(m.group(1));
     }
 
     @Override

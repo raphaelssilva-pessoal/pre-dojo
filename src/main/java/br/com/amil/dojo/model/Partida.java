@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Partida {
     String numeroPartida;
-    List<String> usuarios = new ArrayList<String>();
+    List<UsuarioPartida> usuarios = new ArrayList<UsuarioPartida>();
     Date inicio;
     Date fim;
 
@@ -26,11 +26,11 @@ public class Partida {
         this.numeroPartida = numeroPartida;
     }
 
-    public List<String> getUsuarios() {
+    public List<UsuarioPartida> getUsuarios() {
         return usuarios;
     }
 
-    public void setUsuarios(List<String> usuarios) {
+    public void setUsuarios(List<UsuarioPartida> usuarios) {
         this.usuarios = usuarios;
     }
 

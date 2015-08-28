@@ -56,15 +56,15 @@ public class Assassinato extends Evento{
 	public void change(Log log) {
 		Pattern r = Pattern.compile(Constants.REGEX_EVENTO_ASSASSINATO);
 		Matcher m = r.matcher(log.getMensagem());
-
+		m.find();
 		this.setDataEvento(log.getDataLog());
-		this.setAssassino(m.group(0));
-		this.setAssassinado(m.group(1));
-		if(m.group(2).equals("using")){
-			this.setArma(m.group(2));
+		this.setAssassino(m.group(1));
+		this.setAssassinado(m.group(2));
+		if(m.group(3).equals("using")){
+			this.setArma(m.group(4));
 		}
-		if(m.group(2).equals("by")){
-			this.setOutraForma(m.group(2));
+		if(m.group(3).equals("by")){
+			this.setOutraForma(m.group(4));
 		}
 	}
 
